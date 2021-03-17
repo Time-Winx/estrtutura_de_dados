@@ -1,4 +1,4 @@
-# Exercicio 04
+# Exercício 04
 
 - Crie testes e programas Java que:
 - Inverta os dados de um arranjo usando o TAD Pilha usando LSE.
