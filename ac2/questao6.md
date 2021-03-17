@@ -1,0 +1,1 @@
+#### Resposta:  Arranjo.length
