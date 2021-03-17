@@ -1,13 +1,19 @@
+# Questão 01
+
+ˋˋˋ
 package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
+
 import tratamentoDeErros.EmptyQueueException;
+
 import source.NodeQueue;
 
 class NodeQueueTest {
-
 	Object o;
 	static final NodeQueue<Integer> a = new NodeQueue<Integer>();
 
@@ -37,3 +43,4 @@ class NodeQueueTest {
 	}
 
 }
+ˋˋˋ
