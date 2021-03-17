@@ -16,7 +16,7 @@ Pop()    |    3  |
 Pop()    | "Erro"| ()    //Erro 2 
 Push(4)  |       | (4)
 Pop()    |   4   | ()
-Pop()    | "Error| ()
+Pop()    | "Error| ()   //Erro 3
 Push(5)  |       | (5)
 Push(6)  |       | (5,6)
 Push(7)  |       | (5,6,7)
