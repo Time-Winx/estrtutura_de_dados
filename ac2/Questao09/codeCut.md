@@ -1,6 +1,6 @@
 # Questão 01
 
-ˋˋˋ
+~~~
 package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,4 +43,4 @@ class NodeQueueTest {
 	}
 
 }
-ˋˋˋ
+~~~
