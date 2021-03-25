@@ -1,4 +1,4 @@
-# Atividade complementar 3
+# Atividade continua 3
 
 ## Integrantes
  Nome                          |   RA     |
@@ -16,7 +16,11 @@ R:
 
 ### Questão 2
 
-R: 
+```java
+void String hello() {
+  return "Hello World"
+}
+```
 
 ### Questão 3
 
