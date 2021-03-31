@@ -4,8 +4,10 @@ parentheticRepresentation conforme o algoritmo do slide 55.
 B)  Com base no algoritmo posorder (slide 57) crie o método toStringPostorder (imprime os valores dos nodes visitados).
 diskSpace conforme o algoritmo do slide 80.
 
-C)  depth conforme o algoritmo do slide 84.
+C)  diskSpace conforme o algoritmo do slide 80.
 
-D)  height1 conforme o algoritmo do slide 90.
+D)  depth conforme o algoritmo do slide 84.
 
-E)  height2 conforme o algoritmo do slide 103.
+E)  height1 conforme o algoritmo do slide 90.
+
+F)  height2 conforme o algoritmo do slide 103.
