@@ -10,30 +10,3 @@
  Victor Bastos De Carvalho     | 1903491  |
  William Alves Ribeiro         | 1903690  |
 
-### Questão 1
-
-R: 
-
-### Questão 2
-
-```java
-void String hello() {
-  return "Hello World"
-}
-```
-
-### Questão 3
-
-R: 
-
-### Questão 4
-
-R: 
-
-### Questão 5
-
-R: 
-
-### Questão 6
-
-R: 
