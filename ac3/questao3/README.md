@@ -2,7 +2,6 @@ A)  Incrementar a implementação e teste de LinkedTree<E> (Árvore Genérica) c
 parentheticRepresentation conforme o algoritmo do slide 55.
 
 B)  Com base no algoritmo posorder (slide 57) crie o método toStringPostorder (imprime os valores dos nodes visitados).
-diskSpace conforme o algoritmo do slide 80.
 
 C)  diskSpace conforme o algoritmo do slide 80.
 
