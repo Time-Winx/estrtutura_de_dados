@@ -1,0 +1,20 @@
+# Questao 5 Alternativa E
+
+~~~
+
+
+	
+	public String inorder(BinaryTree<E> T, Position<E> v){
+		String s = "";
+		if(T.hasLeft(v)){
+			s += "(";
+			inorder(T, T.left(v));
+		}
+		s += v;
+		if(T.hasRight(v)){
+			inorder(T, T.left(v));
+			s += ")";
+		}
+		return s;
+	}
+~~~
