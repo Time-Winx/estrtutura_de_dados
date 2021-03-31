@@ -5,28 +5,28 @@ import exceptions.EmptyTreeException;
 import exceptions.InvalidPositionException;
 import position.Position;
 
-// Interface para uma árvore onde os nodos podem ter uma quantidade arbitrária de filhos.
+// Interface para uma ï¿½rvore onde os nodos podem ter uma quantidade arbitrï¿½ria de filhos.
 public interface Tree<E> extends Iterable<E> {
-	// Retorna a quantidade de nodos da árvore.
+	// Retorna a quantidade de nodos da ï¿½rvore.
 	public int size();
-	// Retorna se a árvore está vazia.
+	// Retorna se a ï¿½rvore estï¿½ vazia.
 	public boolean isEmpty();
-	// Retorna um iterador sobre os elementos armazenados na árvore.
+	// Retorna um iterador sobre os elementos armazenados na ï¿½rvore.
 	public Iterator<E> iterator();
-	// Retorna uma coleção iterável dos nodos.
+	// Retorna uma coleï¿½ï¿½o iterï¿½vel dos nodos.
 	public Iterable<Position<E>> positions();
 	// Substitui o elemento armazenado em um dado nodo.
 	public E replace(Position<E> v, E e) throws InvalidPositionException;
-	// Retorna a raiz da árvore.
+	// Retorna a raiz da ï¿½rvore.
 	public Position<E> root() throws EmptyTreeException;
 	// Retorna o pai de um dado nodo.
 	public Position<E> parent(Position<E> v) throws InvalidPositionException, BoundaryViolationException;
-	// Retorna uma coleção iterável dos filhos de um dado nodo.
+	// Retorna uma coleï¿½ï¿½o iterï¿½vel dos filhos de um dado nodo.
 	public Iterable<Position<E>> children(Position<E> v) throws InvalidPositionException;
-	// Retorna se um dado nodo é interno.
+	// Retorna se um dado nodo ï¿½ interno.
 	public boolean isInternal(Position<E> v) throws InvalidPositionException;
-	// Retorna se um dado nodo é externo.
+	// Retorna se um dado nodo ï¿½ externo.
 	public boolean isExternal(Position<E> v) throws InvalidPositionException;
-	// Retorna se um dado nodo é a raiz da árvore.
+	// Retorna se um dado nodo ï¿½ a raiz da ï¿½rvore.
 	public boolean isRoot(Position<E> v) throws InvalidPositionException;
 }

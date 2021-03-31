@@ -9,25 +9,25 @@ import position.Position;
 import tad_lista_de_nodos.NodePositionList;
 import tad_lista_de_nodos.PositionList;
 
-// * Implementação da interface BinaryTree usando uma estrutura encadeada.
+// * Implementaï¿½ï¿½o da interface BinaryTree usando uma estrutura encadeada.
 public class LinkedBinaryTree<E> implements BinaryTree<E> {
-	protected BTPosition<E> root; // referência para a raiz
-	protected int size; // número de nodos
+	protected BTPosition<E> root; // referï¿½ncia para a raiz
+	protected int size; // nï¿½mero de nodos
 	
-	// Cria uma árvore binária vazia.
+	// Cria uma ï¿½rvore binï¿½ria vazia.
 	public LinkedBinaryTree() {
-		root = null; // inicia com uma árvore vazia
+		root = null; // inicia com uma ï¿½rvore vazia
 		size = 0;
 	}
 	
-	// Retorna o número de nodos da árvore.
+	// Retorna o nï¿½mero de nodos da ï¿½rvore.
 	public int size() { return size; }
-	// Retorna se um nodo é interno.
+	// Retorna se um nodo ï¿½ interno.
 	public boolean isInternal(Position<E> v) throws InvalidPositionException {
-		checkPosition(v); // método auxiliar
+		checkPosition(v); // mï¿½todo auxiliar
 		return (hasLeft(v) || hasRight(v));
 	}
-	// Retorna se um nodo é a raiz.
+	// Retorna se um nodo ï¿½ a raiz.
 	public boolean isRoot(Position<E> v) throws InvalidPositionException {
 		checkPosition(v);
 		return (v == root());
@@ -38,7 +38,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		BTPosition<E> vv = checkPosition(v);
 		return (vv.getLeft() != null);
 	}
-	//Retorna a raiz da árvore.
+	//Retorna a raiz da ï¿½rvore.
 	public Position<E> root() throws EmptyTreeException {
 		if (root == null) throw new EmptyTreeException("The tree is empty");
 		return root;
@@ -57,23 +57,26 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		if (parentPos == null) throw new BoundaryViolationException("No parent");
 		return parentPos;
 	}
-	//Retorna uma coleção iterável contendo os filhos de um nodo.
+	//Retorna uma coleï¿½ï¿½o iterï¿½vel contendo os filhos de um nodo.
 	public Iterable<Position<E>> children(Position<E> v) throws InvalidPositionException {
 		PositionList<Position<E>> children = new NodePositionList<Position<E>>();
 		if (hasLeft(v)) children.addLast(left(v));
 		if (hasRight(v)) children.addLast(right(v));
 		return children;
 	}
-	//Retorna uma coleção iterável (inorder) contendo os nodos da árvore.
+	//Retorna uma coleï¿½ï¿½o iterï¿½vel (inorder) contendo os nodos da ï¿½rvore.
 	public Iterable<Position<E>> positionsInorder() {
 		PositionList<Position<E>> positions = new NodePositionList<Position<E>>();
-		if (size != 0) inorderPositions(root(), positions); // atribui as posições usando caminhamento prefixado
+		if (size != 0) preorderPositions(root(), positions); // atribui as posiï¿½ï¿½es usando caminhamento prefixado
 		return positions;
 	}
-	//Retorna uma coleção iterável contendo os nodos da árvore.
+
+	
+
+	//Retorna uma coleï¿½ï¿½o iterï¿½vel contendo os nodos da ï¿½rvore.
 	public Iterable<Position<E>> positions() {
 		PositionList<Position<E>> positions = new NodePositionList<Position<E>>();
-		if (size != 0) preorderPositions(root(), positions); // atribui as posições usando caminhamento prefixado
+		if (size != 0) preorderPositions(root(), positions); // atribui as posiï¿½ï¿½es usando caminhamento prefixado
 		return positions;
 	}
 	//Retorna um iterador sobre os elementos armazenados nos nodos
@@ -90,8 +93,8 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		vv.setElement(o);
 		return temp;
 	}
-	//Método de acesso adicional
-	//Retorna o irmão de um nodo
+	//Mï¿½todo de acesso adicional
+	//Retorna o irmï¿½o de um nodo
 	public Position<E> sibling(Position<E> v) throws InvalidPositionException, BoundaryViolationException {
 		BTPosition<E> vv = checkPosition(v);
 		BTPosition<E> parentPos = vv.getParent();
@@ -104,8 +107,8 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		}
 		throw new BoundaryViolationException("No sibling");
 	}
-	//Métodos de acesso adicionais
-	//Insere a raiz em uma árvore vazia
+	//Mï¿½todos de acesso adicionais
+	//Insere a raiz em uma ï¿½rvore vazia
 	public Position<E> addRoot(E e) throws NonEmptyTreeException {
 		if (!isEmpty()) throw new NonEmptyTreeException("Tree already has a root");
 		size = 1;
@@ -128,15 +131,15 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		BTPosition<E> leftPos = vv.getLeft();
 		BTPosition<E> rightPos = vv.getRight();
 		if (leftPos != null && rightPos != null) throw new InvalidPositionException("Cannot remove node with two children");
-		BTPosition<E> ww; // o único filho de v, se houver
+		BTPosition<E> ww; // o ï¿½nico filho de v, se houver
 		if (leftPos != null) ww = leftPos;
 		else if (rightPos != null) ww = rightPos;
-		else // v é folha
+		else // v ï¿½ folha
 			ww = null;
-		if (vv == root) { // v é a raiz
+		if (vv == root) { // v ï¿½ a raiz
 			if (ww != null) ww.setParent(null);
 			root = ww;
-		} else { // v não é a raiz
+		} else { // v nï¿½o ï¿½ a raiz
 			BTPosition<E> uu = vv.getParent();
 			if (vv == uu.getLeft()) uu.setLeft(ww);
 			else uu.setRight(ww);
@@ -145,7 +148,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		size--;
 		return v.element();
 	}
-	//Conecta duas árvores para serem subárvores de um nodo externo.
+	//Conecta duas ï¿½rvores para serem subï¿½rvores de um nodo externo.
 	public void attach(Position<E> v, BinaryTree<E> T1, BinaryTree<E> T2) throws InvalidPositionException {
 		BTPosition<E> vv = checkPosition(v);
 		if (isInternal(v)) throw new InvalidPositionException("Cannot attach from internal node");
@@ -160,21 +163,21 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 			r2.setParent(vv); // T2 deve ser invalidada
 		}
 	}
-	//Se v é um nodo de árvore binária, converte para BTPosition, caso contrário lança exceção
+	//Se v ï¿½ um nodo de ï¿½rvore binï¿½ria, converte para BTPosition, caso contrï¿½rio lanï¿½a exceï¿½ï¿½o
 	protected BTPosition<E> checkPosition(Position<E> v) throws InvalidPositionException {
 	if (v == null || !(v instanceof BTPosition)) throw new InvalidPositionException("The position is invalid");
 	return (BTPosition<E>) v;
 	}
-	//Cria um novo nodo de árvore binária
+	//Cria um novo nodo de ï¿½rvore binï¿½ria
 	protected BTPosition<E> createNode(E element, BTPosition<E> parent, BTPosition<E> left, BTPosition<E> right) {
 		return new BTNode<E>(element, parent, left, right);
 	}
-	//Cria uma lista que armazena os nodos da subárvore de um nodo ordenados de acordo com o
-	//caminhamento prefixado da subárvore.
+	//Cria uma lista que armazena os nodos da subï¿½rvore de um nodo ordenados de acordo com o
+	//caminhamento prefixado da subï¿½rvore.
 	protected void preorderPositions(Position<E> v, PositionList<Position<E>> pos) throws InvalidPositionException {
 		pos.addLast(v);
-		if (hasLeft(v)) preorderPositions(left(v), pos); // recursão sobre o filho da esquerda
-		if (hasRight(v)) preorderPositions(right(v), pos); // recursão sobre o filho da direita
+		if (hasLeft(v)) preorderPositions(left(v), pos); // recursï¿½o sobre o filho da esquerda
+		if (hasRight(v)) preorderPositions(right(v), pos); // recursï¿½o sobre o filho da direita
 	}
 	public boolean isEmpty() { return (size == 0); }
 	public boolean isExternal(Position<E> v) throws InvalidPositionException { return !isInternal(v); }
@@ -188,4 +191,8 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		BTPosition<E> vv = checkPosition(v);
 		return (vv.getRight() != null);
 	}
+
+
+	
+
 }
