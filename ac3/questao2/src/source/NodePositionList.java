@@ -1,6 +1,11 @@
-package questao2;
+package source;
 
 import java.util.Iterator;
+
+import exception.BoundaryViolationException;
+import exception.EmptyListException;
+import exception.InvalidPositionException;
+import questao2.victorteste.ElementIterator;
 
 public class NodePositionList<E> implements PositionList<E> {
 	protected int numElts; // Número de elementos na lista

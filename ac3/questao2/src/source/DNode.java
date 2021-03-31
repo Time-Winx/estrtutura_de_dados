@@ -1,4 +1,5 @@
-package questao2;
+package source;
+import exception.*;
 
 public class DNode<E> implements Position<E> {
 	private DNode<E> prev, next; // Referência para os nodos anterior e posterior

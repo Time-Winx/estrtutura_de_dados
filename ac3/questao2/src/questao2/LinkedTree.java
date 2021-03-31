@@ -1,4 +1,4 @@
-package questao2;
+package questao2.victorteste;
 
 import java.util.Iterator;
 import source.*;
@@ -157,5 +157,47 @@ public class LinkedTree<E> implements Tree<E> {
         }
         return s;
     }
+    // Implementação 3.b
+    public String posorder (Tree<E> T, Position<E> v) {
+        String s = "";
+        if (T.isInternal(v)) {
+            Boolean firstTime = true;
+            for (Position<E> w : T.children(v)) {
+                if (firstTime) {
+                    // primeiro filho
+                    s += "(\n" + "    " + posorder(T,w);
+                    firstTime = false;
+                } else {
+                    // filhos seguintes
+                    s += "," + posorder(T, w);
+                }
+                s += ")"; // fecha parênteses
+            }
+        }
+        s = v.element().toString(); // ação principal de visita
+        return s;
+    }
+    // Implementação 3.c
+    public int diskSpace(LinkedTree<DiscNode> T, TreePosition<DiscNode> v) {
+
+        int s = v.element().getKbytes();
+        for (Position<DiscNode> w : v.getChildren()) {
+            s += diskSpace(T, (TreePosition<DiscNode>)w);
+        }
+        
+        if (T.isInternal(v)) {
+            System.out.println(v.getElement().getName() + ": " + s);
+        
+        }
+        return s;
+    }
+    
+
+
+    @Override
+    public void addLast(E element) {
+  
+    }
+
     
 }

@@ -1,5 +1,7 @@
-package questao2;
+package questao2.victorteste;
 import java.util.Iterator;
+import source.*;
+import exception.*;
 
 public interface Tree<E> extends Iterable<E> {
     

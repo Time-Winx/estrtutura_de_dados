@@ -1,4 +1,6 @@
-package questao2;
+package questao2.victorteste;
+import source.*;
+
 
 public interface TreePosition<E> extends Position<E> {
     // Define o elemento a ser armazenado nesta posição

@@ -1,6 +1,8 @@
-package questao2;
+package source;
 
 import java.util.Iterator;
+import exception.*;
+
 
 public interface PositionList<E> extends Iterable<E> {
 

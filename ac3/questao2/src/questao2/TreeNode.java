@@ -1,5 +1,5 @@
-package questao2;
-
+package questao2.victorteste;
+import source.*;
 
 public class TreeNode<E> implements TreePosition<E> {
     private E element; // Elemento armazenado neste nodo.
@@ -16,9 +16,9 @@ public class TreeNode<E> implements TreePosition<E> {
     
     public TreeNode(E element, TreePosition<E> parent, PositionList<Position<E>> children) {
 
-    setElement(element);
-    setParent(parent);
-    setChildren(children);
+        setElement(element);
+        setParent(parent);
+        setChildren(children);
 
     }
     
