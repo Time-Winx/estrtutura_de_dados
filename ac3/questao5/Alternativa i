@@ -1,0 +1,25 @@
+# Questao 5 Alternativa i
+
+~~~
+public String printExpression(BinaryTree<E> T, Position<E> v) {
+		String s = "";
+		if (T.isInternal(v)) {
+			s +="(";
+		}
+		if (T.hasLeft(v)) {
+			printExpression(T, T.left(v));
+		}
+		if (T.isInternal(v)){
+			s += v;
+		}
+	
+		if (T.hasRight(v)) {
+			printExpression(T,T.right(v));
+		}
+		if (T.isInternal(v)){
+			s +=")";
+		}
+
+		return s;
+	}
+~~~
