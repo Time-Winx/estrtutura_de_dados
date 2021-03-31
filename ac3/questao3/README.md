@@ -1,4 +1,11 @@
-## 2. Implementação e teste da Árvore Genérica conforme os slides de 23 a 33.
+A)  Incrementar a implementação e teste de LinkedTree<E> (Árvore Genérica) com os seguintes métodos:
+parentheticRepresentation conforme o algoritmo do slide 55.
 
-### Utilizei a copia de alguns arquivos da AC2 para complementar a questão 
-### Sendo eles: DNode, NodePositionList,PositionList
+B)  Com base no algoritmo posorder (slide 57) crie o método toStringPostorder (imprime os valores dos nodes visitados).
+diskSpace conforme o algoritmo do slide 80.
+
+C)  depth conforme o algoritmo do slide 84.
+
+D)  height1 conforme o algoritmo do slide 90.
+
+E)  height2 conforme o algoritmo do slide 103.
