@@ -1,15 +1,12 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 import tad_arvore_binaria_completa.ArrayListCompleteBinaryTree;
 
-class ArrayListCompleteBinaryTreeTest {
-
+public class ArrayListCompleteBinaryTreeTest {
     @Test
-    void test() {
+    public void test(){
         ArrayListCompleteBinaryTree<Integer> T = new ArrayListCompleteBinaryTree<Integer>();
         T.add(4);
         T.add(5);
