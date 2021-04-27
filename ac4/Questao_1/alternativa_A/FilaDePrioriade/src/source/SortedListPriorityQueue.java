@@ -1,0 +1,107 @@
+package source;
+
+import java.util.Comparator;
+
+import exceptions.EmptyPriorityQueueException;
+import exceptions.InvalidKeyException;
+import position.Position;
+import tad_lista_de_nodos.NodePositionList;
+import tad_lista_de_nodos.PositionList;
+
+public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
+    protected PositionList<Entry<K, V>> entries;
+    protected Comparator<K> compa;
+    protected Position<Entry<K, V>> actionPos;
+
+    protected static class MyEntry<K, V> implements Entry<K, V>{
+        protected K k;
+        protected V v;
+
+        public MyEntry(K key, V value){
+            k = key;
+            v = value;
+        }
+
+        public K getKey() { return k; }
+        public V getValue() { return v; }
+
+        public String toString() { return "(" + k + "," + v + ")"; }
+    }
+    // Cria a fila de prioridades com o comparador padrão
+    public SortedListPriorityQueue() {
+        entries = new NodePositionList<Entry<K, V>>();
+        compa = new DefaultComparator<K>();
+    }
+
+    // Cria a fila de prioridade com um comparador informado
+    public SortedListPriorityQueue(Comparator<K> comp){
+        entries = new NodePositionList<Entry<K, V>>();
+        compa = comp;
+    }
+
+    public SortedListPriorityQueue(PositionList<Entry<K, V>> list, Comparator<K> comp){
+        entries = list;
+        compa = comp;
+    }
+
+    public void setComparator(Comparator<K> comp) throws IllegalStateException{
+        if(!isEmpty()) throw new IllegalStateException("Priority queue is not empty");
+        compa = comp;
+    }
+
+    public int size(){ return entries.size(); }
+
+    public boolean isEmpty() { return entries.isEmpty(); }
+
+    public Entry<K, V> min() throws EmptyPriorityQueueException {
+        if (entries.isEmpty()) throw new EmptyPriorityQueueException("priority queue is empty");
+        else return entries.first().element();    
+    }
+
+    public Entry<K, V> insert(K k, V v) throws InvalidKeyException{
+        checkKey(k);
+        Entry<K, V> entry = new MyEntry<K, V>(k, v);
+        insertEntry(entry);
+        return entry;
+    }
+
+    protected void insertEntry(Entry<K, V> e) {
+        if (entries.isEmpty()) {
+            entries.addFirst(e); // insere na lista vazia
+            actionPos = entries.first(); // posição de inserção
+        } else if (compa.compare(e.getKey(), entries.last().element().getKey()) > 0) {
+            entries.addLast(e); // insere no final da lista
+            actionPos = entries.last(); // posição de inserção
+        } else {
+            Position<Entry<K, V>> curr = entries.first();
+            while (compa.compare(e.getKey(), curr.element().getKey()) > 0) {
+                curr = entries.next(curr); // avança para encontrar a posição de inserção
+            }
+            entries.addBefore(curr, e);
+            actionPos = entries.prev(curr); // posição de inserção
+        }
+    }
+
+    // Remove e returna uma entrada com a a menor chave.
+
+    public Entry<K, V> removeMin() throws EmptyPriorityQueueException {
+        if (entries.isEmpty()) throw new EmptyPriorityQueueException("priority queue is empty");
+        else return entries.remove(entries.first());
+    }
+    // Determina se a chave é válida.
+    protected boolean checkKey(K key) throws InvalidKeyException {
+        boolean result;
+        
+        try { // verifica se a chave pode ser comparada
+            result = (compa.compare(key, key) == 0);
+        } catch (ClassCastException e) {
+            throw new InvalidKeyException("key cannot be compared");
+        }
+        return result;
+    }
+
+    // Sebrescreve toString, útil para a depuração.
+    public String toString() {
+        return entries.toString();    
+    }
+}

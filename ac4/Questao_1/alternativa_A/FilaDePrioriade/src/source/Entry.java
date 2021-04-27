@@ -1,9 +1,6 @@
-package baseado_em_lista;
+package source;
 
 public interface Entry<K, V> {
-
     public K getKey();
-
     public V getValue();
-    
-    }
+}
