@@ -1,1 +1,1 @@
-Utilizaria a estrutura de Fila de Prioridade. Com o uso do inserir para armazenar os time-stamp, poderia utilizar o comparador para extrair o com menor tempo e assim estabelecer qual o melhor evento na fila de pousos e decolagens.
+  Utilizaria a estrutura de Fila de Prioridade. Com o uso do inserir para armazenar os time-stamp, poderia utilizar o comparador para extrair o com menor tempo e assim estabelecer qual o melhor evento na fila de pousos e decolagens.
