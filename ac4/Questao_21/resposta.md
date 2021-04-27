@@ -1,0 +1,1 @@
+O TAD Dicionario tem como principal diferença do TAD Mapa a possibilidade de multiplas entradas para a mesma chave.
