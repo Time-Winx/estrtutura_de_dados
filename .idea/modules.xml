@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/EstruturaDeDados.iml" filepath="$PROJECT_DIR$/.idea/EstruturaDeDados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ac4/Questao_1/alternativa_A/TAD-FilaDePrioridades/src/TAD-FilaDePrioridades.iml" filepath="$PROJECT_DIR$/ac4/Questao_1/alternativa_A/TAD-FilaDePrioridades/src/TAD-FilaDePrioridades.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ac4/exercicio_1/exercicio_a/exercicio_a.iml" filepath="$PROJECT_DIR$/ac4/exercicio_1/exercicio_a/exercicio_a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ac4/questao_22/questao_22.iml" filepath="$PROJECT_DIR$/ac4/questao_22/questao_22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ac4/exercicio_1/exercicio_a/tad_lista_de_nodos.iml" filepath="$PROJECT_DIR$/ac4/exercicio_1/exercicio_a/tad_lista_de_nodos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ac4/Questao_1/alternativa_B/ArvoreBinariaCompleta/src/tests/tests.iml" filepath="$PROJECT_DIR$/ac4/Questao_1/alternativa_B/ArvoreBinariaCompleta/src/tests/tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
