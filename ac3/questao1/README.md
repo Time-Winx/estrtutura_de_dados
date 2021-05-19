@@ -14,15 +14,11 @@
 
 - **d)** Quantos ancestrais tem o nodo cs016/?
 
-**R:** 1 ancestral
-
-/usuario/rt/cursos/
+**R:** 1 ancestral: /usuario/rt/cursos/
 
 - **e)** Quais são os irmãos do nodo temas/?
 
-**R:** notas
-
-programas/
+**R:** notas: programas/
 
 - **f)** Que nodos pertencem à subárvore com raiz no nodo projetos/?
 
