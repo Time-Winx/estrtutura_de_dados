@@ -18,7 +18,7 @@
 
 - **e)** Quais são os irmãos do nodo temas/?
 
-**R:** notas: programas/
+**R:** notas, programas/
 
 - **f)** Que nodos pertencem à subárvore com raiz no nodo projetos/?
 
