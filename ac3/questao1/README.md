@@ -11,16 +11,19 @@
 - c) Quantos descendentes tem o nodo cs016/?
 
 **R:** 9 descendentes
+
 notas, temas/, hw1, hw2, hw3, programas/, pr1, pr2, pr3
 
 - d) Quantos ancestrais tem o nodo cs016/?
 
 **R:** 1 ancestral
+
 /usuario/rt/cursos/
 
 - e) Quais são os irmãos do nodo temas/?
 
 **R:** notas
+
 programas/
 
 - f) Que nodos pertencem à subárvore com raiz no nodo projetos/?
