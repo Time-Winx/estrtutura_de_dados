@@ -29,8 +29,8 @@ programas/
 
 - g) Qual é a profundidade do nodo trabalhos/?
 
-**R:** a profundidade do nodo trabalhos/ é de 3
+**R:** A profundidade do nodo trabalhos/ é de 3
 
 - h) Qual a altura da árvore?
 
-**R:** a altura da árvore é 4
+**R:** A altura da árvore é 4
