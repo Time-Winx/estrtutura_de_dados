@@ -11,7 +11,7 @@ notas, temas/, hw1, hw2, hw3, programas/, pr1, pr2, pr3
 **e)** notas
 programas/
 
-**f)** trabalhos/, compre baixo, venda alto, demos/, mercado
+**f)** projetos/, trabalhos/, compre baixo, venda alto, demos/, mercado
 
 **g)** a profundidade do nodo trabalhos/ é de 3
 
