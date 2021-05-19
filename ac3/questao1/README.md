@@ -1,7 +1,6 @@
 ## 1. As questões a seguir são relativas à árvore genérica abaixo.
 
 - a) Qual nodo é a raiz?
-
 **R:** /usuario/rt/cursos/
 
 - b) Quais são os nodos internos?
