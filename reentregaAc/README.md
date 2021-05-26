@@ -1,6 +1,6 @@
 # Reentrega das Atividades Contínuas.
 
-#### Professor, estamos reenviando apenas as questões que estavam erradas das Atividades Contínuas AC03, AC04 e AC05.
+### Professor, estamos reenviando apenas as questões que estavam erradas das Atividades Contínuas AC03, AC04 e AC05.
 
 #### Grupo:
 
