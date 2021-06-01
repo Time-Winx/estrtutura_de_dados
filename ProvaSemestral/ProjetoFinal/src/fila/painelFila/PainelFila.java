@@ -10,7 +10,7 @@ public class PainelFila {
 
     public static void apresentacao(){
         System.out.println("\n==========================================================");
-        System.out.println("|                     TAD - Pilha                         |");
+        System.out.println("|                     TAD - Fila                         |");
         System.out.println("==========================================================");
     }
 
