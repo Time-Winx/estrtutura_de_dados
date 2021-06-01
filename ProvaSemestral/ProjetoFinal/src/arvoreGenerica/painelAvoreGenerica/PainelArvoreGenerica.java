@@ -57,6 +57,17 @@ public class PainelArvoreGenerica {
         System.out.println("| 7. Voltar                               |");
         System.out.println("|_________________________________________|");
 
+        /*
+            isInternal
+            isRoot
+            parent
+            children
+            replace
+            addRoot
+            swapElements
+            createNode
+        */
+
         System.out.print("Informa o número do método que deseja testar: ");
         int entrada = enter.nextInt();
 
@@ -153,7 +164,54 @@ public class PainelArvoreGenerica {
         voltandoAoMenu();
     }
 
+    public static void testeIsInternal(Position<String> p){
+        System.out.println("=============================================================");
+        System.out.println("É externo: " + T.isExternal(p);
+        System.out.println("=============================================================");
+        voltandoAoMenu();
+    }
+
+    public static void testeisIsRoot(Position<String> p){
+        System.out.println("=============================================================");
+        System.out.println("É externo: " + T.isRoot(p);
+        System.out.println("=============================================================");
+        voltandoAoMenu();
+    }
+
+    public static void testeParent(Position<String> p){
+        System.out.println("=============================================================");
+        System.out.println("O pai de " + p.element() + " é " + T.parent(p).element();
+        System.out.println("=============================================================");
+        voltandoAoMenu();
+    }
+
+    public static void testeChildren(Position<String> p){
+        System.out.println("=============================================================");
+        String[] filhos = 
+        for(Position<E> w : T.children(p)){
+			w.element();
+		}
+        System.out.println("=============================================================");
+        voltandoAoMenu();
+    }
+
     public static void testeFilhos(){
+
+    }
+
+    public static void testeIsReplace(){
+
+    }
+
+    public static void testeAddRoot(){
+
+    }
+
+    public static void testeSwapElements(){
+
+    }
+
+    public static void testeCreateNode(){
 
     }
 
