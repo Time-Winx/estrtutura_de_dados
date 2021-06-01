@@ -11,7 +11,7 @@ public class PainelListaDeNodos {
 
     public static void apresentacao(){
         System.out.println("\n==========================================================");
-        System.out.println("|                     TAD - Lista de Nodo                         |");
+        System.out.println("|                     TAD - Lista de Nodo                  |");
         System.out.println("==========================================================");
     }
 
@@ -248,11 +248,11 @@ public class PainelListaDeNodos {
         Position<Integer> p1 = null;
         Position<Integer> p2 = null;
 
-        if(listaNode.first() != null){
+        if(/*listaNode.first() != null*/listaNode.size() > 1){
             p1 = listaNode.first();
             p1 = listaNode.next(p1);
         }
-        if(listaNode.last() != null){
+        if(/*listaNode.last() != null*/listaNode.size() > 1){
             p2 = listaNode.last();
             p2 = listaNode.prev(p2);
         }
