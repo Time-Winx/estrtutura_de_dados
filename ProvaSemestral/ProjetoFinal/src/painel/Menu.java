@@ -7,6 +7,7 @@ import fila.painelFila.PainelFila;
 import listaArranjo.painelArranjo.PainelListaArranjo;
 import listaDeNodos.painelListaDeNodos.PainelListaDeNodos;
 import pilha.painelPilha.PainelPilha;
+import filaDePrioridade.painel.PainelFilaDePrioridade;
 
 public class Menu {
     public static void main(String[] args){
@@ -62,6 +63,9 @@ public class Menu {
                     break;
                 case 5:
                     PainelArvoreGenerica.menuArvoreGenerica();
+                    break;
+                case 7:
+                    PainelFilaDePrioridade.menuFIlaDePrioridade();
                     break;
                 case 13:
                     System.out.println("Saindo...");
