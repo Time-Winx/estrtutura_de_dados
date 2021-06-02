@@ -58,6 +58,7 @@ public class LinkedTree<E> implements Tree<E> {
 
 	// Retorna uma coleção iterável dos filhos de um nodo
 	public Iterable<Position<E>> children(Position<E> v) throws InvalidPositionException {
+		
 		TreePosition<E> vv = checkPosition(v);
 		return vv.getChildren();
 	}
@@ -65,7 +66,9 @@ public class LinkedTree<E> implements Tree<E> {
 	// Retorna uma coleção iterável dos nodos da árvore.
 	public Iterable<Position<E>> positions() {
 		PositionList<Position<E>> positions = new NodePositionList<Position<E>>();
-		if (size != 0) preorderPositions(root(), positions);
+		if (size != 0){
+			positions = preorderPositions(root(), positions);
+		}
 		return positions;
 	}
 
@@ -94,7 +97,7 @@ public class LinkedTree<E> implements Tree<E> {
 		return root;
 	}
 
-	// Troca os elementos de dos nodos
+	// Troca os elementos de dois nodos
 	public void swapElements(Position<E> v, Position<E> w) throws InvalidPositionException {
 		TreePosition<E> vv = checkPosition(v);
 		TreePosition<E> ww = checkPosition(w);
@@ -168,9 +171,11 @@ public class LinkedTree<E> implements Tree<E> {
 	// Cria uma lista armazenando os nodos das subárvore de um nodo
 	// ordenado de acordo com a travessia das subárvores
 	
-	protected void preorderPositions(Position<E> v, PositionList<Position<E>> pos) throws InvalidPositionException {
+	protected PositionList<Position<E>> preorderPositions(Position<E> v, PositionList<Position<E>> pos) throws InvalidPositionException {
 		pos.addLast(v);
-		for (Position<E> w : children(v)) preorderPositions(w, pos);
+		if(isInternal(v))
+			for (Position<E> w : children(v)) preorderPositions(w, pos);
+		return pos;
 	}
 
 	// OU
@@ -237,8 +242,10 @@ public class LinkedTree<E> implements Tree<E> {
 	
 	public String toStringPostorder(Tree<E> T, Position<E> v){
 		String s = "";
-		for(Position<E> w : T.children(v)){
-			s += toStringPostorder(T, w) + " ";
+		if(T.isInternal(v)){
+			for(Position<E> w : T.children(v)){
+				s += toStringPostorder(T, w) + " ";
+			}
 		}
 		s += v.element();
 		return s;
