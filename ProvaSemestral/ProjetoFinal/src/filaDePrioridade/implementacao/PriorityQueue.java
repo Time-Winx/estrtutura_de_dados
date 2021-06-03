@@ -1,7 +1,6 @@
 package filaDePrioridade.implementacao;
 
 import java.security.InvalidKeyException;
-
 public interface PriorityQueue<K, V> {
 
     public int size();

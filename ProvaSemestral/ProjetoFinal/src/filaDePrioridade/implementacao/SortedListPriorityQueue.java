@@ -1,9 +1,9 @@
 package filaDePrioridade.implementacao;
 
+import java.security.InvalidKeyException;
 import java.util.Comparator;
 
-import javax.swing.text.Position;
-
+import arvoreGenerica.implementacao.interfaces.Position;
 import listaDeNodos.implementacao.NodePositionList;
 import listaDeNodos.implementacao.PositionList;
 
@@ -12,6 +12,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
     protected PositionList<Entry<K, V>> entries;
     protected Comparator<K> compa;
     protected Position<Entry<K, V>> actionPos;
+   
 
     protected static class MyEntry<K, V> implements Entry<K, V> {
         protected K k;
@@ -55,5 +56,58 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
         if (entries.isEmpty()) throw new EmptyPriorityQueueException("priority queue is empty"); 
         else return entries.first().element();
     }
+
+    public Entry<K, V> insert(K k, V v) throws InvalidKeyException {
+        checkKey(k);
+        Entry<K, V> entry = new MyEntry<K, V>(k, v);
+        insertEntry(entry);
+        return entry;
+    }
+
+    protected void insertEntry(Entry<K, V> e) {
+        if (entries.isEmpty()) {
+            entries.addFirst(e);
+            actionPos = entries.first();
+        } else if (compa.compare(e.getKey(), entries.last().element().getKey()) > 0) {
+            entries.addLast(e);
+            actionPos = entries.last()
+        } else {
+            Position<Entry<K, V>> curr = entries.first();
+            while (compa.compare(e.getKey(), curr.element().getKey() > 0) {
+                curr = entries.next(curr);
+            }
+            entries.addBefore(curr, e);
+            actionPos = entries.prev(curr)
+        }
+        public Entry<K, V> removeMin() throws EmptyPriorityQueueException {
+
+            if (entries.isEmpty()) throw new EmptyPriorityQueueException("priority queue is empty");
+            
+            else return entries.remove(entries.first());
+            
+        }
+        protected boolean checkKey(K key) throws InvalidKeyException {
+
+            boolean result;
+            
+            try { // verifica se a chave pode ser comparada
+            
+            result = (compa.compare(key, key) == 0);
+            
+            } catch (ClassCastException e) {
+            
+            throw new InvalidKeyException("key cannot be compared");
+            
+            }
+            
+            return result;
+
+    }
+
+    public String toString() {
+
+        return entries.toString();
+        
+        }
 
 }
