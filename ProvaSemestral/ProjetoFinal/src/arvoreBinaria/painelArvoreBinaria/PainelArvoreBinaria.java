@@ -17,7 +17,7 @@ public class PainelArvoreBinaria {
 
     public static void apresentacao(){
         System.out.println("\n==========================================================");
-        System.out.println("|                TAD - Árvore Genérica                   |");
+        System.out.println("|                TAD - Árvore Binaria                   |");
         System.out.println("==========================================================");
     }
 
@@ -34,7 +34,7 @@ public class PainelArvoreBinaria {
 
     private static void iniciandoArvore() {
         System.out.println(" -----------------------------------------");
-        System.out.println("|      Iníciando uma Àrvore Genérica      |");
+        System.out.println("|      Iníciando uma Àrvore Binaria      |");
         System.out.println("|-----------------------------------------|");
         System.out.println("| 1. Vazia                                |");
         System.out.println("| 2. Com elementos                        |");
