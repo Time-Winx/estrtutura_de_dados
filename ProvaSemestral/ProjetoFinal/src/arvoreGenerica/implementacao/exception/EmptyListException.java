@@ -5,6 +5,8 @@ package arvoreGenerica.implementacao.exception;
 
 @SuppressWarnings("serial")
 public class EmptyListException extends RuntimeException {
+s
+
 	public EmptyListException(String err) { super(err); }
 }
 
