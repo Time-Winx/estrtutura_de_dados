@@ -1,5 +1,4 @@
 package arvoreBinaria.implementacao.source;
-
 import arvoreBinaria.implementacao.exceptions.*;
 import arvoreBinaria.implementacao.position.*;
 

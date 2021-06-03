@@ -3,7 +3,7 @@ package arvoreBinaria.implementacao.position;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import tad_lista_de_nodos.PositionList;
+import arvoreBinaria.implementacao.tad_lista_de_nodos.*;
 import java.lang.UnsupportedOperationException;
 
 /* Uma classe iterator Simples para listas. Os elementos da clise s�o retornados por

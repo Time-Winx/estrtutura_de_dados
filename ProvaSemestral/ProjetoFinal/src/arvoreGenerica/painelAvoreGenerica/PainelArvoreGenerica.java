@@ -94,17 +94,6 @@ public class PainelArvoreGenerica {
         System.out.println("| 15. Voltar                               |");
         System.out.println("|_________________________________________|");
 
-        /*
-            isInternal
-            isRoot
-            parent
-            children
-            replace
-            addRoot
-            swapElements
-            createNode
-        */
-
         System.out.print("Informa o número do método que deseja testar: ");
         int entrada = enter.nextInt();
 
