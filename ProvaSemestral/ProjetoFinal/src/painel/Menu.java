@@ -2,6 +2,7 @@ package painel;
 
 import java.util.Scanner;
 
+import arvoreBinaria.painelArvoreBinaria.PainelArvoreBinaria;
 import arvoreGenerica.painelAvoreGenerica.PainelArvoreGenerica;
 import fila.painelFila.PainelFila;
 import listaArranjo.painelArranjo.PainelListaArranjo;
@@ -34,7 +35,7 @@ public class Menu {
         System.out.println("| 11. TAD-Mapa Ordenado – AVL             |");
         System.out.println("| 12. TAD-Grafos                          |");
         System.out.println("|_________________________________________|");
-        System.out.println("| 13. Sair                                |");
+        System.out.println("| 0. Sair                                |");
         System.out.println("|_________________________________________|");
 
         System.out.print("Informa o número do TAD que deseja testar: ");
@@ -63,7 +64,10 @@ public class Menu {
                 case 5:
                     PainelArvoreGenerica.menuArvoreGenerica();
                     break;
-                case 13:
+                case 6:
+                    PainelArvoreBinaria.menuArvoreBinaria();
+                    break;
+                case 0:
                     System.out.println("Saindo...");
                     return;
             }

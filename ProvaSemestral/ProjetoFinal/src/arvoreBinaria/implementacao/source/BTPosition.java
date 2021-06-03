@@ -1,5 +1,4 @@
 package arvoreBinaria.implementacao.source;
-
 import arvoreBinaria.implementacao.position.*;
 
 public interface BTPosition<E> extends Position<E>{
